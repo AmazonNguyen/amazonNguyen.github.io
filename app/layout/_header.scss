@@ -1,0 +1,5 @@
+.addr__Contact {
+    @include media('<lg') {
+        display: none;
+    }
+}

@@ -1,0 +1,96 @@
+.text__contact {
+    font-family: 'Pacifico', cursive;
+    transition: all 1s ease;
+    animation-direction: 1s;
+    color: #BCD4DC;
+    font-size: 1.2rem;
+    &:hover {
+        transform: scale(1.4);
+        color: $color-nav_header;
+        margin-right: 25px;
+    }
+}
+
+.navbar__menu {
+    z-index: 1000 !important;
+    .nav-item a {
+        @include media('<md') {
+            font-size: 0.9rem;
+        }
+        color: $color-txt_menu !important;
+        font-weight: 700;
+        &:hover {
+            color: #FFF !important;
+        }
+    }
+    .top-menu-btn {
+        a {
+            @include media('>sm') {
+                display: none;
+            }
+        }
+        @include media('<sm') {
+            border: 1px solid #FFF;
+            height: 50px;
+            width: 100%;
+            background: #333;
+        }
+        #nav-icon {
+            height: 100%;
+            width: 50px;
+            // border: 1px solid #000000;
+            position: relative;
+            span {
+                position: absolute;
+                height: 2px;
+                width: 30px;
+                background: $color-txt_menu;
+                &:nth-child(1) {
+                    top: 12px;
+                }
+                &:nth-child(2) {
+                    top: 22px;
+                }
+                &:nth-child(3) {
+                    top: 32px;
+                }
+            }
+        }
+    }
+    .navbar {
+        @include media('<sm') {
+            display: none;
+            background: #333;
+            width: 100%;
+        }
+        .navbar-nav {
+            border-bottom: 2px solid $color-txt_menu;
+        }
+        li {
+            position: relative;
+            &:not(:last-child)>a:after {
+                content: "";
+                display: inline-block;
+                width: 1px;
+                height: 25px;
+                background: $color-txt_menu;
+                position: absolute;
+                right: 0;
+                @include media('<sm') {
+                    display: none;
+                }
+            }
+            &:not(:first-child)>a {
+                color: #FFF !important;
+                &:hover {
+                    color: $color-txt_2-brand !important;
+                }
+            }
+        }
+    }
+}
+
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}

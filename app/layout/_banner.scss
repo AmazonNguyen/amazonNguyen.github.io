@@ -1,0 +1,73 @@
+#banner {
+    position: relative;
+    height: calc(90vh + 2px);
+    width: auto;
+    #particles {
+        @include _position__a();
+        z-index: 80;
+        height: 100%;
+        width: 100%;
+    }
+    .navbar__menu {
+        position: absolute;
+        bottom: 20%;
+        z-index: 90;
+        font-size: 1.1rem;
+        width: 100%;
+        @include media('<sm') {
+            top: 0;
+        }
+    }
+    .search__Form {
+        position: absolute;
+        z-index: 100;
+    }
+    .container-fluid {
+        width: 100%;
+        height: calc(80vh + 5px);
+        position: relative;
+        img {
+            z-index: 80;
+            height: 100vh;
+            width: 100vw;
+        }
+        .text__brand {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            z-index: 85;
+            border-top: 10px dotted $color-txt_1-brand;
+            border-bottom: 10px dotted $color-txt_2-brand;
+            color: $color-txt_2-brand;
+            font-size: 5rem;
+            font-weight: bolder;
+            font-family: 'Great Vibes', cursive;
+            animation: text__Ani;
+            animation-duration: 6s;
+            @include media('<md') {
+                font-size: 3rem;
+            }
+            @include media('<sm') {
+                font-size: 2.5rem;
+            }
+        }
+        .txt__min {
+            color: $color-txt_1-brand;
+        }
+    }
+}
+
+@keyframes text__Ani {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(100px);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

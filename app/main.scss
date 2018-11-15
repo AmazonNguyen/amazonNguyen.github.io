@@ -1,0 +1,34 @@
+//bootstrap
+@import 'vendors/bootstrap/scss/_bootstrap';
+//abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+//vendors
+@import 'vendors/include-media';
+//base
+@import 'base/reset';
+//layout
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/banner';
+@import 'layout/footer';
+// @import 'layout/grid';
+// @import 'layout/sidebar';
+// @import 'layout/forms';
+//components
+@import 'components/icons';
+@import 'components/buttons';
+@import 'components/inputs';
+@import 'components/modals';
+@import 'components/carousel';
+@import 'components/tabs';
+@import 'components/cards';
+@import 'components/carouselSlick';
+@import 'components/btn-icon_menu';
+//pages
+@import 'pages/form-search';
+@import 'pages/website';
+@import 'pages/recentProducts';
+@import 'pages/featuredProducts';
+@import 'pages/news';
+@import 'pages/news1';

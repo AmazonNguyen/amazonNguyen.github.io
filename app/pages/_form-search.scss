@@ -1,0 +1,27 @@
+.search__Form {
+    width: 50%;
+    @include media('<sm') {
+        width: 80%;
+    }
+    input[type=text] {
+        font-size: 1rem;
+        padding-left: 1.5em;
+        color: $color-txt_menu;
+        border-color: $color-txt_menu;
+    }
+    .form-control {
+        position: relative;
+        border-radius: 20px !important;
+    }
+    .btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background: transparent !important;
+    }
+    .svg-inline--fa.fa-w-16 {
+        width: 1em;
+        color: $color-txt_menu;
+    }
+}

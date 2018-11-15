@@ -1,0 +1,15 @@
+#nav-icon.active {
+    span {
+        &:nth-child(1) {
+            transition: all 0.5s linear;
+            transform: rotateZ(45deg) translate(7px, 7px);
+        }
+        &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            transition: all 0.5s linear;
+            transform: rotateZ(-45deg) translate(7px, -7px);
+        }
+    }
+}

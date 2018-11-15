@@ -1,0 +1,34 @@
+.News {
+    .nav-tabs {
+        width: 100% !important;
+        border-bottom: 3px solid #FFF !important;
+        .nav-item {
+            width: calc(100% / 3);
+            a {
+                color: $color-nav_h-hover;
+                font-size: 1.5rem;
+                font-weight: 700;
+                font-family: $font-Pacifico;
+                @include media('>lg') {
+                    text-align: center;
+                }
+                @include media('<lg') {
+                    font-size: 1rem;
+                }
+            }
+            .nav-link {
+                padding: 0 !important;
+                &:hover {
+                    border: none !important;
+                }
+            }
+        }
+    }
+    .tab-content {
+        background: rgba(0, 0, 0, 0.4) !important;
+        width: 100% !important;
+        @include media('>md') {
+            height: 31em !important;
+        }
+    }
+}

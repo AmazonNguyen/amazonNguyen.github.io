@@ -1,0 +1,25 @@
+input[type=text]:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.help-block {
+    color: $color-input-sign;
+    width: 300px;
+}
+
+.has-error .input-group-text {
+    background-color: #f2dede;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid $color-input-sign;
+    border-radius: .25rem;
+    color: $color-input-sign;
+    .form-control {
+        border: 1px solid $color-input-sign;
+    }
+    .control-label {
+        color: $color-input-sign;
+        font-weight: 700;
+    }
+}

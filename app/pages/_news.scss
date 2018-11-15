@@ -1,0 +1,11 @@
+.News {
+    padding-top: 2em;
+    max-width: 100%;
+    @include media('>md') {
+        height: 38em;
+    }
+    background: url(../images/bg_banner__3.png) no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+}

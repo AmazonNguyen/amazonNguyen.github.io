@@ -1,0 +1,42 @@
+.footer {
+    width: 100%;
+    height: auto;
+    background: $color-bg-footer;
+    padding: 2em 0;
+    .contact_ft {
+        border-right: 3px solid #fff;
+        border-left: 3px solid #fff;
+        @include media('<md') {
+            border: none;
+        }
+        @include media('<lg') {
+            border-right: none;
+        }
+        padding-left: 2em;
+        .cont-contact {
+            h4 {
+                color: $color-txt_1-brand;
+                font-family: $font-Pacifico;
+            }
+        }
+    }
+    .aboutUs {
+        @include media('<md') {
+            display: none;
+        }
+    }
+    .sales {
+        @include media('<md') {
+            margin-top: 2em;
+        }
+        form {
+            padding: 1em;
+            background: rgba(249, 72, 119, 0.3);
+            border-radius: 5px;
+            .btn {
+                background: gray !important;
+                border: none;
+            }
+        }
+    }
+}

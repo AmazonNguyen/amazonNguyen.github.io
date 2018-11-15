@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="app\main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+    <script type="text/javascript" src="app\vendors\fontawesome-all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="app\vendors\slick\slick-theme.css">
+    <link rel="stylesheet" href="app\vendors\slick\slick.css">
+    <script type="text/javascript" src="app\vendors\jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="app\vendors\jquery.particleground.js"></script>
+    <script type="text/javascript" src="app\vendors\js_vali.min.js"></script>
+    <script type="text/javascript" src="app\vendors\scriptJS.js"></script>
+    <script type="text/javascript" src="app\vendors\demo.js"></script>
+    <script type="text/javascript" src="app\vendors\Vali_FormScript.js"></script>
+    <title>Web_banhang</title>
+</head>
+
+<body>
+    <!-- ====================================================NAVBAR-CONTACT__TOP======================================================= -->
+    <header>
+        <div class="navbar__contact">
+            <nav class="navbar navbar-expand bg-success">
+                <!-- ==================list__icon-Contact=================== -->
+                <ul class="navbar-nav icon-Contacts">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><i class="fab fa-facebook-f icon__contact"></i></a>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fab fa-instagram icon__contact"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fab fa-twitter icon__contact"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link"><i class="fab fa-google-plus-g icon__contact"></i></a>
+                        </li>
+                    </li>
+                </ul>
+                <!-- ==================list__address-Contact=================== -->
+                <ul class="navbar-nav addr__Contact ml-auto">
+                    <li class="nav-item text__contact">Email: AmazonNguyen96@gmail.com</li>
+                    <li class="nav-item ml-5 text__contact">Hotline: 01653240976</li>
+                </ul>
+                <!-- ==================Cart=================== -->
+                <ul class="navbar-nav ml-auto mr-5">
+                    <li class="nav-item cart__Class" data-toggle="tooltip" data-placement="bottom" title="Giỏ hàng của bạn!"><i class="fas fa-shopping-cart fa-2x cart__icon"></i><span class="badge badge-success rounded-circle info-cart">0</span></li>
+                </ul>
+                <!-- ==================list__Sign=================== -->
+                <ul class="navbar-nav mr-3 navSign">
+                    <li class="nav-item mr-1" data-toggle="tooltip" data-placement="bottom" title="Đăng ký tài khoản"><button type="button" class="btn" id="btn__SignUp" data-toggle="modal" data-target="#signUp__Modal"><i class="fas fa-user-plus icon__sign"></i></button></li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="bottom" title="Đăng nhập tài khoản"><button type="button" class="btn" id="btn__signIn" data-toggle="modal" data-target="#signIn__Modal"><i class="fas fa-sign-in-alt  icon__sign"></i></button></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- the modal of sign up form -->
+        <div class="modal fade" id="signUp__Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Đăng ký tài khoản</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="form1">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label class="control-label" for="Username">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-circle"></i></span>
+                                        </div>
+                                        <input id="Username" name="Username" type="text" placeholder="Enter Username" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label" for="Email">Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                                        </div>
+                                        <input id="Email" name="Email" type="text" placeholder="Enter Email" class="form-control input-md">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label" for="Phone">Phone</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon2"><i class="fa fa-phone"></i></span>
+                                        </div>
+                                        <input id="phone" name="Phone" type="text" placeholder="Enter Phone" class="form-control input-md">
+                                    </div>
+                                </div>
+
+                                <!-- Password input-->
+                                <div class="form-group">
+                                    <label class="control-label" for="Password">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon3"><i class="fa fa-key fa-fw"></i></span>
+                                        </div>
+                                        <input id="password" name="password" type="password" placeholder="Enter Password" class="form-control input-md">
+                                    </div>
+                                </div>
+
+                                <!-- Password input-->
+                                <div class="form-group">
+                                    <label class="control-label" for="password_again">Confirm Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon4"><i class="fa fa-key fa-fw"></i></span>
+                                        </div>
+                                        <input id="password_again" name="password_again" type="password" placeholder="Enter Password Again" class="form-control input-md">
+                                    </div>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="control-label" for="Submit"></label>
+                                    <div class="col-md-4">
+                                        <button id="Submit" class="btn btn-success" type="Submit">Sign up</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of the modal of sign up form -->
+        <!-- the modal of sign in form -->
+        <div class="modal fade" id="signIn__Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="form2">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="Username">Username</label>
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-circle"></i></span>
+                                        </div>
+                                        <input id="Username" name="Username" type="text" placeholder="Enter Username" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <!-- Password input-->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="Password">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon3"><i class="fa fa-key fa-fw"></i></span>
+                                        </div>
+                                        <input id="password" name="password" type="password" placeholder="Enter Password" class="form-control input-md">
+                                    </div>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="form-group">
+                                    <label class="col-md-4 control-label" for="Submit"></label>
+                                    <div class="col-md-4">
+                                        <button id="Submit" class="btn btn-success" type="Submit">Login</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of the modal of sign in form -->
+    </header>
+    <!--====================================================end of NAVBAR-CONTACT__TOP======================================================= -->
+    <section>
+        <div id="banner">
+            <!-- A jQuery plugin for snazzy background particle systems -->
+            <div id="particles"></div>
+            <!-- end of plugin -->
+            <div class="container-fluid banner__carousel">
+                <h1 class="text__brand p-3"><span class="txt__min">Amazon</span> Nguyen</h1>
+                <div class="row">
+                    <div id="imageCarousel" class="carousel slide" data-interval="2000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images\bg_banner__1.png" alt="image1" class="img-fluid">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images\bg_banner__2.png" alt="image2" class="img-fluid">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images\bg_banner__3.png" alt="image3" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MENU -->
+            <div class="navbar__menu">
+                <div class="d-flex top-menu-btn justify-content-end">
+                    <a href="#" id="nav-icon" class="d-flex justify-content-center align-items-center d-sm-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <nav class="navbar navbar-expand-sm navbar-dark justify-content-center text-uppercase">
+                    <ul class="navbar-nav">
+                        <li class="nav-item p-2">
+                            <a href="#" class="nav-link"><span><i class="fas fa-home mr-2"></i></span>Trang chủ</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a href="#" class="nav-link">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a href="#" class="nav-link">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a href="#" class="nav-link">Tin tức</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a href="#" class="nav-link">Tư vấn</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a href="#" class="nav-link">Liên lạc</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <form class="search__Form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control pt-3" placeholder="Search here...">
+                                <div class="input-group-append">
+                                    <button class="btn pt-2" type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- end of THE MENU -->
+    </section>
+    <!--====================================================end of BANNER======================================================= -->
+    <!--====================================================featured products======================================================= -->
+    <section>
+        <div class="featured-products" style="background:#A3895A;margin-top:calc(5% - 10px)">
+            <h2 class="text-center pt-5">Featured Products</h2>
+            <div class="container pt-5 pb-5">
+                <div class="row justify-content-center">
+                    <div class="col-8 col-sm-6 col-lg-3 item-img" style="padding-right:2px !important;
+                    padding-left: 3px !important;
+                    margin-right:25px;">
+                        <span></span>
+                        <span></span>
+                        <img src="images\v_Xòe\VXo_06.png" alt="products_1" class="img-thumbnail img-fluid">
+                        <a href="#">
+                                See more
+                            </a>
+                    </div>
+                    <div class="col-8 col-sm-6 col-lg-3 item-img" style="padding-right:2px !important;
+                    padding-left: 3px !important;
+                    margin-right:25px;">
+                        <span></span>
+                        <span></span>
+                        <img src="images\v_Party\VD_03.png" alt="products_1" class="img-thumbnail img-fluid">
+                        <a href="#">
+                                See more
+                            </a>
+                    </div>
+                    <div class="col-8 col-sm-6 col-lg-3 item-img" style="padding-right:2px !important;
+                    padding-left: 3px !important;
+                    margin-right:25px;">
+                        <span></span>
+                        <span></span>
+                        <img src="images\v_Xòe\VXo_02.png" alt="products_3" class="img-thumbnail img-fluid">
+                        <a href="#">
+                                See more
+                            </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====================================================end of the featured products======================================================= -->
+    <!-- ==================================================RECENT PRODUCTS=========================================== -->
+    <section>
+        <div class="recent-products">
+            <h2 class="text-center">Recent Products</h2>
+            <h5 class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, excepturi.</h5>
+            <div class="container mt-5">
+                <div class="row d-flex justify-content-around">
+                    <div class="col-xs-10 col-sm-6 col-md-6 col-lg-3">
+                        <div class="box">
+                            <div class="item-img">
+                                <p>NEW</p>
+                                <img src="images\a_Summer\AC_01.png" class="img-fluid" alt="AC_01"></div>
+                            <div class="content">
+                                <h5>Nhẹ nhàng, tinh tế</h5>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, corrupti?</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-10 col-sm-6 col-md-6 col-lg-3">
+                        <div class="box">
+                            <div class="item-img">
+                                <p>NEW</p>
+                                <img src="images\a_Summer\AC_02.png" class="img-fluid" alt="AC_02"></div>
+                            <div class="content">
+                                <h5>Nhẹ nhàng, tinh tế</h5>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, corrupti?</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-10 col-sm-6 col-md-6 col-lg-3">
+                        <div class="box">
+                            <div class="item-img">
+                                <p>NEW</p>
+                                <img src="images\v_Party\VD_01.png" class="img-fluid" alt="AC_03"></div>
+                            <div class="content">
+                                <h5>Nhẹ nhàng, tinh tế</h5>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, corrupti?</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5 d-flex justify-content-around">
+                    <div class="col-xs-10 col-sm-6 col-md-6 col-lg-3">
+                        <div class="box">
+                            <div class="item-img">
+                                <p>NEW</p>
+                                <img src="images\v_Xòe\VXo_04.png" class="img-fluid" alt="AC_01"></div>
+                            <div class="content">
+                                <h5>Nhẹ nhàng, tinh tế</h5>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, corrupti?</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-10 col-sm-6 col-md-6 col-lg-3">
+                        <div class="box">
+                            <div class="item-img">
+                                <p>NEW</p>
+                                <img src="images\v_Xòe\VXo_01.png" class="img-fluid" alt="AC_02"></div>
+                            <div class="content">
+                                <h5>Nhẹ nhàng, tinh tế</h5>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, corrupti?</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-10 col-sm-6 col-md-6 col-lg-3">
+                        <div class="box">
+                            <div class="item-img">
+                                <p>NEW</p>
+                                <img src="images\v_Xuông\VX_08.png" class="img-fluid" alt="AC_03"></div>
+                            <div class="content">
+                                <h5>Nhẹ nhàng, tinh tế</h5>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, corrupti?</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====================================================end of the recent products======================================================= -->
+    <!--====================================================NEWS======================================================= -->
+    <div class="News">
+        <div class="container">
+            <div class="row">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#new1">Fashion News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#new2">Promotional Campaign</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#new3">Recruit</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div id="new1" class="container tab-pane active"><br>
+                        <div class="sliders">
+                            <div class="card">
+                                <img src="images\NK.png" alt="1" class="card-img-top">
+                                <div class="card-body">
+                                    <h6 class="card-title">Ngân Khánh bật mí mix đồ hiệu quả</h6>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <a href="#">Read more...</a>
+                                </div>
+                            </div>
+
+
+                            <div class="card">
+                                <img src="images\TQ.png" alt="1" class="card-img-top">
+                                <div class="card-body">
+                                    <h6 class="card-title">Thu Quỳnh nữ tính với phong cách nhẹ nhàng </h6>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    <a href="#">Read more...</a>
+                                </div>
+                            </div>
+
+
+                            <div class="card">
+                                <img src="images\PO.png" alt="1" class="card-img-top">
+                                <div class="card-body">
+                                    <h6 class="card-title">Phương Oanh gợi ý trang phục nổi bật</h6>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    <a href="#">Read more...</a>
+                                </div>
+                            </div>
+
+
+                            <div class="card">
+                                <img src="images\TH.png" alt="1" class="card-img-top">
+                                <div class="card-body">
+                                    <h6 class="card-title">Thanh Hương mix đồ quyến rũ, trẻ trung</h6>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <a href="#">Read more...</a>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="card">
+                                <img src="images\a_Summer\AC_01.png" alt="1" class="card-img-top">
+                                <div class="card-body">
+                                    <h6 class="card-title">Ngân Khánh bật mí mix đồ hiệu quả</h6>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <a href="#">Read more...</a>
+                                </div>
+                            </div>
+
+
+                            <div class="card">
+                                <img src="images\a_Summer\AC_02.png" alt="1" class="card-img-top">
+                                <div class="card-body">
+                                    <h6 class="card-title">Thu Quỳnh nữ tính với phong cách nhẹ nhàng </h6>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    <a href="#">Read more...</a>
+                                </div>
+                            </div>
+
+
+                            <div class="card">
+                                <img src="images\a_Summer\AC_03.png" alt="1" class="card-img-top">
+                                <div class="card-body">
+                                    <h6 class="card-title">Phương Oanh gợi ý trang phục nổi bật</h6>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    <a href="#">Read more...</a>
+                                </div>
+                            </div>
+
+
+                            <div class="card">
+                                <img src="images\a_Summer\AC_04.png" alt="1" class="card-img-top">
+                                <div class="card-body">
+                                    <h6 class="card-title">Thanh Hương mix đồ quyến rũ, trẻ trung</h6>
+                                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <a href="#">Read more...</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="new2" class="container tab-pane fade"><br>
+                        <h3>Đang Cập Nhật</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div id="new3" class="container tab-pane fade"><br>
+                        <h3>Đang cập nhật</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="app\vendors\slick\slick.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sliders').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: false,
+                responsive: [{
+                    // breakpoint:điểm bắt đầu thay đổi về số slide hiển thị
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                }, {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        })
+    </script>
+    <!--====================================================end of the NEWS======================================================= -->
+    <!--====================================================FOOTER======================================================= -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="aboutUs">
+                        <h4>Về Chúng Tôi</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempore enim fuga non, veritatis cum officia vero dignissimos? Rem tenetur, eius sed fugit doloremque ipsa illo consectetur rerum esse quidem, provident inventore quia
+                            nostrum ex sequi necessitatibus facilis optio quas quam nihil. Expedita libero ab tempora, atque a impedit iusto!</p>
+                    </div>
+                </div>
+                <div class="col-9 col-md-6 col-lg-4">
+                    <div class="contact_ft">
+                        <h4>Liên Lạc</h4>
+                        <div class="cont-contact">
+                            <p>Hotline: 01643240976</p>
+                            <p>Fanpage: AmazonNguyen96</p>
+                            <p>Email: cskh@amazonnguyen.com.vn</p>
+                            <p>VPGD: Hoài Đức - Hà Nội.</p>
+                            <h4>Aamazon Nguyen Fashion</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 col-md-9 col-lg-4">
+                    <div class="sales">
+                        <h4>Đăng Ký Nhận Thông Tin Ưu Đãi</h4>
+                        <div class="form-sales">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Phone:</label>
+                                    <input type="phone" class="form-control" id="phone" placeholder="Enter phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Đăng Ký</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--====================================================end of the FOOTER======================================================= -->
+    <script type="text/javascript" src="app\vendors\bootstrap\dist\js\bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="app\vendors\bootstrap\dist\js\bootstrap.min.js"></script>
+</body>
+
+</html>

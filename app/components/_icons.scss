@@ -1,0 +1,44 @@
+.icon-Contacts .icon__contact {
+    color: $color-nav_header;
+    font-size: 1.5rem;
+    transition: $transition;
+    &:hover {
+        transform: scale(1.5);
+        color: $color-nav_h-hover;
+    }
+}
+
+.cart__Class {
+    position: relative;
+    .cart__icon {
+        color: $color-nav_header;
+        &:hover {
+            color: $color-nav_h-hover;
+        }
+    }
+    .badge {
+        background: red;
+    }
+    .info-cart {
+        position: absolute;
+        top: -8px;
+        left: 30px;
+    }
+}
+
+.icon__sign {
+    color: $color-nav_header;
+    font-size: 1.5rem;
+    transition: $transition;
+    &:hover {
+        color: $color-nav_h-hover;
+        transform: scale(1.7);
+    }
+}
+
+.navbar__menu .fa-home {
+    font-size: 1.5rem;
+    @include media('<lg') {
+        display: none;
+    }
+}

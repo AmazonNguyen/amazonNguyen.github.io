@@ -1,0 +1,11 @@
+.card {
+    @include media('<sm') {
+        width: 18em !important;
+        display: block !important;
+        margin: 0 auto;
+    }
+    border: none !important;
+    a {
+        color: $color-nav_h-hover;
+    }
+}

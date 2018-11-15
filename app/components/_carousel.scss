@@ -1,0 +1,10 @@
+/* custom the speed of carousel in the banner */
+
+.carousel-inner .carousel-item {
+    transition: -webkit-transform 2s ease;
+    transition: transform 2s ease;
+    transition: transform 2s ease, -webkit-transform 2s ease;
+}
+
+
+/* end of ...custom the speed of carousel in the banner */
